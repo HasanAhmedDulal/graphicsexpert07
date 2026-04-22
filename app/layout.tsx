@@ -156,10 +156,9 @@ export default function RootLayout({
         <Script
           src="https://readdy.ai/api/public/assistant/widget?projectId=0129ea20-b9a7-4698-8d7f-c0b1767bc667"
           strategy="afterInteractive"
-          mode="hybrid"
+
           voice-show-transcript="true"
-          theme="light"
-          size="compact"
+
           accent-color="#2563eb"
           button-base-color="#1f2937"
           button-accent-color="#ffffff"

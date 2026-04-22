@@ -634,8 +634,13 @@ export async function generateStaticParams() {
   ];
 }
 
-export default function PortfolioDetailPage({ params }: { params: { slug: string } }) {
-  const project = portfolioData[params.slug];
+export default async function PortfolioDetailPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params;
+  const project = portfolioData[slug];
 
   if (!project) {
     return (
